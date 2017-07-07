@@ -16,12 +16,12 @@ const ToDoItem = ({ todo, toggleComplete, removeToDo }) => (
    </li>
 );
 
-const ClearButton = ({ removeCompleted }) => (
-  <button onClick={removeCompleted}>Clear Completed</button>
-);
-
 const ToDoCount = ({ number }) => (
   <p>{number} {number === 1 ? 'todo' : 'todos'}</p>
+);
+
+const ClearButton = ({ removeCompleted }) => (
+  <button onClick={removeCompleted}>Clear Completed</button>
 );
 
 class App extends Component {
@@ -100,6 +100,7 @@ class App extends Component {
             <span>(press enter to add)</span>
           </form>
         </div>
+
         <ul>
         {todos.map((todo, index) => (
           <ToDoItem 
